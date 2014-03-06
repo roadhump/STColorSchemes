@@ -369,6 +369,19 @@
 		</dict>
 		<dict>
 			<key>name</key>
+			<string>HTML character</string>
+			<key>scope</key>
+			<string>constant.character</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#0A8585</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
 			<string>ERB tags</string>
 			<key>scope</key>
 			<string>punctuation.section.embedded.ruby</string>
