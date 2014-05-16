@@ -47,8 +47,10 @@
 			<dict>
 				<key>fontStyle</key>
 				<string>italic</string>
+				<key>background</key>
+				<string>#FFEAEA</string>
 				<key>foreground</key>
-				<string>#999988</string>
+				<string>#ea8cb7</string>
 			</dict>
 		</dict>
 		<dict>
@@ -402,6 +404,19 @@
 			<dict>
 				<key>foreground</key>
 				<string>#CF1040</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>JSX tags</string>
+			<key>scope</key>
+			<string>source.js tag</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>background</key>
+				<string>#e8e8e8</string>
 			</dict>
 		</dict>
 
