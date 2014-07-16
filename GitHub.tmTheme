@@ -4,6 +4,8 @@
 <!-- ============================================ -->
 <!-- app:  http://tmtheme-editor.herokuapp.com    -->
 <!-- code: https://github.com/aziz/tmTheme-Editor -->
+
+<!-- red: #DD1144 -->
 <plist version="1.0">
 <dict>
 	<key>name</key>
@@ -164,6 +166,8 @@
 			<dict>
 				<key>foreground</key>
 				<string>#DD1144</string>
+				<key>fontStyle</key>
+				<string></string>
 			</dict>
 		</dict>
 		<dict>
@@ -487,13 +491,28 @@
 			<key>name</key>
 			<string>CSS property value all</string>
 			<key>scope</key>
-			<string>meta.property-value, constant.other.color, variable.other.stylus</string>
+			<string>meta.property-value, constant.other.color</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
 				<string>#445588</string>
 				<key>fontStyle</key>
 				<string></string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>CSS (Stylus, SCSS) variables</string>
+			<key>scope</key>
+			<string>variable.other.stylus, variable.scss variable.scss, source.scss meta.set.variable variable</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#445588</string>
+				<key>background</key>
+				<string>#e8e8e8</string>
+				<key>fontStyle</key>
+				<string>bold</string>
 			</dict>
 		</dict>
 		<dict>
@@ -550,13 +569,40 @@
 			<key>name</key>
 			<string>CSS property punctuation</string>
 			<key>scope</key>
-			<string>punctuation.separator.key-value.css, punctuation.terminator.rule.css</string>
+			<string>punctuation.separator.key-value.css, punctuation.terminator.rule.css, punctuation.separator.key-value.scss, punctuation.terminator.rule.scss</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>foreground</key>
 				<string>#00000070</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>SCSS interpolation</string>
+			<key>scope</key>
+			<string>variable.interpolation.scss</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#DD1144</string>
+				<key>fontStyle</key>
+				<string>bold</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>SCSS function</string>
+			<key>scope</key>
+			<string>support.function.misc.scss</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#000000</string>
+				<key>fontStyle</key>
+				<string></string>
 			</dict>
 		</dict>
 
