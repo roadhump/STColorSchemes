@@ -8,6 +8,8 @@
 <!-- red: #DD1144 -->
 <plist version="1.0">
 <dict>
+
+	<!-- globals -->
 	<key>name</key>
 	<string>GitHub</string>
 	<key>settings</key>
@@ -96,7 +98,7 @@
 			<key>name</key>
 			<string>Function (definition)</string>
 			<key>scope</key>
-			<string>entity.name.function, keyword.other.name-of-parameter.objc</string>
+			<string>entity.name.function, entity.name.method, meta.function.arrow storage.type.function</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
@@ -105,19 +107,21 @@
 				<string>#990000</string>
 			</dict>
 		</dict>
+
 		<dict>
 			<key>name</key>
 			<string>Class (definition)</string>
 			<key>scope</key>
-			<string>entity.name</string>
+			<string>meta.function-call entity.name.function</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
-				<string>bold</string>
+				<string></string>
 				<key>foreground</key>
-				<string>#445588</string>
+				<string>#990000</string>
 			</dict>
 		</dict>
+
 		<dict>
 			<key>name</key>
 			<string>Number</string>
@@ -139,9 +143,49 @@
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#000000</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Variable "this"</string>
+			<key>scope</key>
+			<string>variable.language.this</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
 				<string>bold</string>
 				<key>foreground</key>
 				<string>#009999</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Variable class</string>
+			<key>scope</key>
+			<string>entity.name.class, meta.class.extends variable.other</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>bold</string>
+				<key>foreground</key>
+				<string>#445588</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Property</string>
+			<key>scope</key>
+			<string>meta.property.object, variable.other.property, constant.other.object.key.js string</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>italic</string>
+				<key>foreground</key>
+				<string>#000000</string>
 			</dict>
 		</dict>
 		<dict>
@@ -161,7 +205,7 @@
 			<key>name</key>
 			<string>String</string>
 			<key>scope</key>
-			<string>string</string>
+			<string>string, string.quoted punctuation.definition.string</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
@@ -185,7 +229,7 @@
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>Inherited class seperator</string>
+			<string>Inherited class separator</string>
 			<key>scope</key>
 			<string>punctuation.separator.inheritance</string>
 			<key>settings</key>
@@ -194,6 +238,19 @@
 				<string>bold</string>
 				<key>foreground</key>
 				<string>#000000</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Punctuation separator and terminator</string>
+			<key>scope</key>
+			<string>punctuation.terminator, punctuation.separator, punctuation.separator.key-value.css, punctuation.separator.key-value.scss, source.js keyword.operator.accessor, source.js keyword.operator.spread</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#00000070</string>
 			</dict>
 		</dict>
 		<dict>
@@ -307,6 +364,9 @@
 			<dict>
 				<key>foreground</key>
 				<string>#009926</string>
+				<key>background</key>
+				<string>#f1f1f1</string>
+
 			</dict>
 		</dict>
 		<dict>
@@ -320,7 +380,9 @@
 				<string>#000000</string>
 			</dict>
 		</dict>
+		<!-- /globals -->
 
+		<!-- HTML -->
 		<dict>
 			<key>name</key>
 			<string>HTML and Jade doctype</string>
@@ -423,7 +485,9 @@
 				<string>#e8e8e8</string>
 			</dict>
 		</dict>
+		<!-- /HTML -->
 
+		<!-- CSS -->
 		<dict>
 			<key>name</key>
 			<string>CSS all selectors</string>
@@ -565,20 +629,9 @@
 				<string></string>
 			</dict>
 		</dict>
-		<dict>
-			<key>name</key>
-			<string>CSS property punctuation</string>
-			<key>scope</key>
-			<string>punctuation.separator.key-value.css, punctuation.terminator.rule.css, punctuation.separator.key-value.scss, punctuation.terminator.rule.scss</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>foreground</key>
-				<string>#00000070</string>
-			</dict>
-		</dict>
+		<!-- /CSS -->
 
+		<!-- SCSS -->
 		<dict>
 			<key>name</key>
 			<string>SCSS interpolation</string>
@@ -605,7 +658,9 @@
 				<string></string>
 			</dict>
 		</dict>
+		<!-- /SCSS -->
 
+		<!-- JS -->
 		<dict>
 			<key>name</key>
 			<string>JS Function keyword</string>
@@ -621,22 +676,13 @@
 			<key>name</key>
 			<string>JS Debugger and Console</string>
 			<key>scope</key>
-			<string>keyword.other.js, entity.name.type.object.js.firebug, support.function.js.firebug</string>
+			<string>keyword.other.js, entity.name.type.object.js.firebug, support.function.js.firebug, support.type.object.console, support.function.console</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
 				<string>#99000010</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>JS Console</string>
-			<key>scope</key>
-			<string>entity.name.type.object.js.firebug</string>
-			<key>settings</key>
-			<dict>
 				<key>foreground</key>
 				<string>#000000</string>
 			</dict>
@@ -652,7 +698,24 @@
 				<string>#000000</string>
 			</dict>
 		</dict>
+		<dict>
+			<key>name</key>
+			<string>JS Built-in</string>
+			<key>scope</key>
+			<string>support.class.builtin, support.type.object, support.module.node.js</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>italic bold</string>
+				<key>background</key>
+				<string>#f1f1f1</string>
+				<key>foreground</key>
+				<string>#009999</string>
+			</dict>
+		</dict>
+		<!-- JS -->
 
+		<!-- JSON -->
 		<dict>
 			<key>name</key>
 			<string>JSON Value</string>
@@ -664,7 +727,9 @@
 				<string>#445588</string>
 			</dict>
 		</dict>
+		<!-- /JSON -->
 
+		<!-- diff -->
 		<dict>
 			<key>name</key>
 			<string>diff header from</string>
@@ -723,6 +788,7 @@
 				<string>#000000</string>
 			</dict>
 		</dict>
+		<!-- /diff -->
 	</array>
 	<key>uuid</key>
 	<string>26786979-843B-4FE2-BCB6-4FCEC6F8FB58</string>
