@@ -720,7 +720,7 @@
 			<key>name</key>
 			<string>JSON Value</string>
 			<key>scope</key>
-			<string>meta.structure.dictionary.value.json string.quoted.double.json</string>
+			<string>meta.structure.dictionary.value.json string.quoted.double.json, meta.structure.dictionary.value.json string.quoted.double punctuation.definition.string</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
